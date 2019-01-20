@@ -21,7 +21,7 @@ public class UserInfoController {
     private UserInfoService userInfoService;
 
     /**
-     * @apiDefine UserInfo 用户信息
+     * @apiDefine UserInfo 用户
      */
 
     /**

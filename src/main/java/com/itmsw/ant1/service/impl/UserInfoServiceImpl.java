@@ -75,6 +75,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public CommonDTO getListByPage(UserInfo userInfo) {
         try{
+            userInfo.setPageStart( (userInfo.getPage()-1)*userInfo.getRows() );
             return CommonDTOUtil.success(userInfoDao.getListByPage(userInfo));
         }catch (Exception e){
             e.printStackTrace();

@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2019-01-15 15:16
  */
 @Data
-public class CompanyInfo implements Serializable {
+public class CompanyInfo extends PageEntity implements Serializable {
 
     private Integer id;
 
@@ -19,9 +19,9 @@ public class CompanyInfo implements Serializable {
 
     private String contactPhone;
 
-    private String contactLicence;
+    private String companyLicence;
 
-    private String contactAddress;
+    private String companyAddress;
 
     private String companyLogo;
 

@@ -1,6 +1,9 @@
 package com.itmsw.ant1.service;
 
 import com.itmsw.ant1.entity.ProductInfo;
+import com.itmsw.ant1.util.dto.CommonDTO;
+
+import java.util.List;
 
 /**
  * @author tianyi
@@ -13,20 +16,27 @@ public interface ProductInfoService {
      * @param productInfo spring自动装配的对象
      * @return
      */
-    public ProductInfo addUser(ProductInfo productInfo);
+    public CommonDTO add(ProductInfo productInfo);
 
     /**
      * 修改货品信息
      * @param productInfo spring自动装配的对象
      * @return
      */
-    public int update(ProductInfo productInfo);
+    public CommonDTO update(ProductInfo productInfo);
 
     /**
      * 删除货品
      * @param productInfo
      * @return
      */
-    public int delete(ProductInfo productInfo);
+    public CommonDTO delete(ProductInfo productInfo);
+
+    /**
+     * 按页获取列表
+     * @param productInfo
+     * @return
+     */
+    public CommonDTO getListByPage(ProductInfo productInfo);
     
 }

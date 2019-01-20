@@ -1,13 +1,250 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.itmsw.ant1.dao.IProductInfoDao" >
-    <!--<resultMap id="BaseResultMap" type="com.itmsw.ant1.entity.ProductInfo" >-->
-        <!--<id column="id" property="id" jdbcType="INTEGER" />-->
-        <!--<result column="user_name" property="userName" jdbcType="VARCHAR" />-->
-        <!--<result column="password" property="password" jdbcType="VARCHAR" />-->
-        <!--<result column="age" property="age" jdbcType="INTEGER" />-->
-    <!--</resultMap>-->
+    <resultMap id="BaseResultMap" type="com.itmsw.ant1.entity.ProductInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="product_id" property="productId" jdbcType="INTEGER" />
+        <result column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="product_code" property="productCode" jdbcType="VARCHAR" />
+        <result column="client_code" property="clientCode" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="name_cn" property="nameCn" jdbcType="VARCHAR" />
+        <result column="name_en" property="nameEn" jdbcType="VARCHAR" />
+        <result column="desc_cn" property="descCn" jdbcType="VARCHAR" />
+        <result column="desc_en" property="descEn" jdbcType="VARCHAR" />
+        <result column="size_cn" property="sizeCn" jdbcType="VARCHAR" />
+        <result column="size_en" property="sizeEn" jdbcType="VARCHAR" />
+        <result column="material_cn" property="materialCn" jdbcType="VARCHAR" />
+        <result column="materical_en" property="materialEn" jdbcType="VARCHAR" />
+        <result column="surface_cn" property="surfaceCn" jdbcType="VARCHAR" />
+        <result column="surface_en" property="surfaceEn" jdbcType="VARCHAR" />
+        <result column="package_cn" property="packageCn" jdbcType="VARCHAR" />
+        <result column="package_en" property="packageEn" jdbcType="VARCHAR" />
+        <result column="carton_cn" property="cartonCn" jdbcType="VARCHAR" />
+        <result column="carton_en" property="cartonEn" jdbcType="VARCHAR" />
+        <result column="disabled" property="disabled" jdbcType="INTEGER" />
+    </resultMap>
+
     <sql id="Base_Column_List" >
-        id, user_name, password, age
+        id, product_id, user_id, product_code, client_code, create_time, name_cn,
+        name_en, desc_cn, desc_en, size_cn, size_en, material_cn, material_en,
+        surface_cn, surface_en, package_cn, package_en, carton_cn, carton_en, disabled
     </sql>
+    <insert id="insertSelective" parameterType="com.itmsw.ant1.entity.ProductInfo">
+        insert into product_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="productId != null" >
+                product_id,
+            </if>
+            <if test="userId != null" >
+                user_id,
+            </if>
+            <if test="productCode != null" >
+                product_code,
+            </if>
+            <if test="clientCode != null" >
+                client_code,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="nameCn != null" >
+                name_cn,
+            </if>
+            <if test="nameEn != null" >
+                name_en,
+            </if>
+            <if test="descCn != null" >
+                desc_cn,
+            </if>
+            <if test="descEn != null" >
+                desc_en,
+            </if>
+            <if test="sizeCn != null" >
+                size_cn,
+            </if>
+            <if test="sizeEn != null" >
+                size_en,
+            </if>
+            <if test="materialCn != null" >
+                material_cn,
+            </if>
+            <if test="materialEn != null" >
+                material_en,
+            </if>
+            <if test="surfaceCn != null" >
+                surface_cn,
+            </if>
+            <if test="surfaceEn != null" >
+                surface_en,
+            </if>
+            <if test="packageCn != null" >
+                package_cn,
+            </if>
+            <if test="packageEn != null" >
+                package_en,
+            </if>
+            <if test="cartonCn != null" >
+                carton_cn,
+            </if>
+            <if test="cartonEn != null" >
+                carton_en,
+            </if>
+            <if test="disabled != null" >
+                disabled,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="productId != null" >
+                #{productId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null" >
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="productCode != null" >
+                #{productCode,jdbcType=VARCHAR},
+            </if>
+            <if test="clientCode != null" >
+                #{clientCode,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=BIGINT},
+            </if>
+            <if test="nameCn != null" >
+                #{nameCn,jdbcType=VARCHAR},
+            </if>
+            <if test="nameEn != null" >
+                #{nameEn,jdbcType=VARCHAR},
+            </if>
+            <if test="descCn != null" >
+                #{descCn,jdbcType=VARCHAR},
+            </if>
+            <if test="descEn != null" >
+                #{descEn,jdbcType=VARCHAR},
+            </if>
+            <if test="sizeCn != null" >
+                #{sizeCn,jdbcType=VARCHAR},
+            </if>
+            <if test="sizeEn != null" >
+                #{sizeEn,jdbcType=VARCHAR},
+            </if>
+            <if test="materialCn != null" >
+                #{materialCn,jdbcType=VARCHAR},
+            </if>
+            <if test="materialEn != null" >
+                #{materialEn,jdbcType=VARCHAR},
+            </if>
+            <if test="surfaceCn != null" >
+                #{surfaceCn,jdbcType=VARCHAR},
+            </if>
+            <if test="surfaceEn != null" >
+                #{surfaceEn,jdbcType=VARCHAR},
+            </if>
+            <if test="packageCn != null" >
+                #{packageCn,jdbcType=VARCHAR},
+            </if>
+            <if test="packageEn != null" >
+                #{packageEn,jdbcType=VARCHAR},
+            </if>
+            <if test="cartonCn != null" >
+                #{cartonCn,jdbcType=VARCHAR},
+            </if>
+            <if test="cartonEn != null" >
+                #{cartonEn,jdbcType=VARCHAR},
+            </if>
+            <if test="disabled != null" >
+                #{disabled,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.itmsw.ant1.entity.ProductInfo">
+        update product_info
+        <set >
+            <if test="id != null" >
+                id = #{id,jdbcType=INTEGER},
+            </if>
+            <if test="productId != null" >
+                product_id = #{productId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null" >
+                user_id = #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="productCode != null" >
+                product_code = #{productCode,jdbcType=VARCHAR},
+            </if>
+            <if test="clientCode != null" >
+                client_code = #{clientCode,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+                create_time = #{createTime,jdbcType=BIGINT},
+            </if>
+            <if test="nameCn != null" >
+                name_cn = #{nameCn,jdbcType=VARCHAR},
+            </if>
+            <if test="nameEn != null" >
+                name_en = #{nameEn,jdbcType=VARCHAR},
+            </if>
+            <if test="descCn != null" >
+                desc_cn = #{descCn,jdbcType=VARCHAR},
+            </if>
+            <if test="descEn != null" >
+                desc_en = #{descEn,jdbcType=VARCHAR},
+            </if>
+            <if test="sizeCn != null" >
+                size_cn = #{sizeCn,jdbcType=VARCHAR},
+            </if>
+            <if test="sizeEn != null" >
+                size_en = #{sizeEn,jdbcType=VARCHAR},
+            </if>
+            <if test="materialCn != null" >
+                material_cn = #{materialCn,jdbcType=VARCHAR},
+            </if>
+            <if test="materialEn != null" >
+                materical_en = #{materialEn,jdbcType=VARCHAR},
+            </if>
+            <if test="surfaceCn != null" >
+                surface_cn = #{surfaceCn,jdbcType=VARCHAR},
+            </if>
+            <if test="surfaceEn != null" >
+                surface_en = #{surfaceEn,jdbcType=VARCHAR},
+            </if>
+            <if test="packageCn != null" >
+                package_cn = #{packageCn,jdbcType=VARCHAR},
+            </if>
+            <if test="packageEn != null" >
+                package_en = #{packageEn,jdbcType=VARCHAR},
+            </if>
+            <if test="cartonCn != null" >
+                carton_cn = #{cartonCn,jdbcType=VARCHAR},
+            </if>
+            <if test="cartonEn != null" >
+                carton_en = #{cartonEn,jdbcType=VARCHAR},
+            </if>
+            <if test="disabled != null" >
+                disabled = #{disabled,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from product_info
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List" />
+        from product_info
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.itmsw.ant1.entity.ProductInfo">
+        SELECT *
+        FROM product_info
+        limit #{pageStart,jdbcType=INTEGER},#{rows,jdbcType=INTEGER}
+    </select>
 </mapper>

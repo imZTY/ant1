@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2019-01-15 16:48
  */
 @Data
-public class RoleInfo implements Serializable {
+public class RoleInfo extends PageEntity implements Serializable {
 
     private Integer id;
 
