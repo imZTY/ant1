@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.itmsw.ant1.dao.IProductInfoDao" >
-    <resultMap id="BaseResultMap" type="com.itmsw.ant1.entity.ProductInfo" >
+<mapper namespace="com.product.view.dao.IProductInfoDao" >
+    <resultMap id="BaseResultMap" type="com.common.entity.ProductInfo" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="product_id" property="productId" jdbcType="INTEGER" />
         <result column="user_id" property="userId" jdbcType="INTEGER" />
@@ -30,7 +30,7 @@
         name_en, desc_cn, desc_en, size_cn, size_en, material_cn, material_en,
         surface_cn, surface_en, package_cn, package_en, carton_cn, carton_en, disabled
     </sql>
-    <insert id="insertSelective" parameterType="com.itmsw.ant1.entity.ProductInfo">
+    <insert id="insertSelective" parameterType="com.common.entity.ProductInfo">
         insert into product_info
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -163,7 +163,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.itmsw.ant1.entity.ProductInfo">
+    <update id="updateByPrimaryKeySelective" parameterType="com.common.entity.ProductInfo">
         update product_info
         <set >
             <if test="id != null" >
@@ -242,7 +242,7 @@
         from product_info
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.itmsw.ant1.entity.ProductInfo">
+    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.common.entity.ProductInfo">
         SELECT *
         FROM product_info
         limit #{pageStart,jdbcType=INTEGER},#{rows,jdbcType=INTEGER}

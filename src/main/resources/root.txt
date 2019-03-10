@@ -1,0 +1,6 @@
+卷 资料盘 的文件夹 PATH 列表
+卷序列号为 0005-6146
+F:\STUDY\JIDI\2018\ITMSW\PJ\ANT1\SRC\MAIN\RESOURCES
+├─mapper
+├─static 各静态文件存放的路径（js/css/图片...）
+└─templates 页面存放的路径（html）

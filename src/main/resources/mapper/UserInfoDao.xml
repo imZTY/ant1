@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.itmsw.ant1.dao.IUserInfoDao" >
-    <resultMap id="BaseResultMap" type="com.itmsw.ant1.entity.UserInfo" >
+<mapper namespace="com.sys.user.dao.IUserInfoDao" >
+    <resultMap id="BaseResultMap" type="com.common.entity.UserInfo" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
         delete from user_info
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insertSelective" parameterType="com.itmsw.ant1.entity.UserInfo" >
+    <insert id="insertSelective" parameterType="com.common.entity.UserInfo" >
         insert into user_info
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -86,7 +86,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.itmsw.ant1.entity.UserInfo" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.common.entity.UserInfo" >
         update user_info
         <set >
             <if test="userName != null" >
@@ -116,12 +116,25 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.itmsw.ant1.entity.UserInfo" >
+    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.sys.user.filter.UserInfoFilter" >
         SELECT *
         FROM user_info
+        WHERE 1 = 1
+        <if test="roleIds != null" >
+            and role_id in
+            <foreach collection="roleIds" index="index" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="sex != null" >
+            and sex = #{sex, jdbcType=VARCHAR}
+        </if>
+        <if test="disabled != null" >
+            and disabled = #{disabled, jdbcType=INTEGER}
+        </if>
         limit #{pageStart,jdbcType=INTEGER},#{rows,jdbcType=INTEGER}
     </select>
-    <select id="selectByUserName" resultMap="BaseResultMap" parameterType="com.itmsw.ant1.entity.UserInfo" >
+    <select id="selectByUserName" resultMap="BaseResultMap" parameterType="com.common.entity.UserInfo" >
         SELECT
         <include refid="Base_Column_List"/>
         FROM user_info

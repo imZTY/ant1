@@ -1,7 +1,7 @@
 [
   {
     "type": "get",
-    "url": "/company/list",
+    "url": "/sys/company/list",
     "title": "按页获取公司列表",
     "group": "CompanyInfo",
     "parameter": {
@@ -57,13 +57,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/CompanyInfoController.java",
+    "filename": "./src/main/java/com/sys/company/controller/CompanyInfoController.java",
     "groupTitle": "公司",
-    "name": "GetCompanyList"
+    "name": "GetSysCompanyList"
   },
   {
     "type": "get",
-    "url": "/company/one",
+    "url": "/sys/company/one",
     "title": "",
     "group": "CompanyInfo",
     "parameter": {
@@ -119,13 +119,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/CompanyInfoController.java",
+    "filename": "./src/main/java/com/sys/company/controller/CompanyInfoController.java",
     "groupTitle": "公司",
-    "name": "GetCompanyOne"
+    "name": "GetSysCompanyOne"
   },
   {
     "type": "post",
-    "url": "/company/add",
+    "url": "/sys/company/add",
     "title": "新增公司",
     "group": "CompanyInfo",
     "parameter": {
@@ -251,13 +251,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/CompanyInfoController.java",
+    "filename": "./src/main/java/com/sys/company/controller/CompanyInfoController.java",
     "groupTitle": "公司",
-    "name": "PostCompanyAdd"
+    "name": "PostSysCompanyAdd"
   },
   {
     "type": "post",
-    "url": "/company/delete",
+    "url": "/sys/company/delete",
     "title": "删除公司",
     "group": "CompanyInfo",
     "parameter": {
@@ -313,13 +313,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/CompanyInfoController.java",
+    "filename": "./src/main/java/com/sys/company/controller/CompanyInfoController.java",
     "groupTitle": "公司",
-    "name": "PostCompanyDelete"
+    "name": "PostSysCompanyDelete"
   },
   {
     "type": "post",
-    "url": "/company/update",
+    "url": "/sys/company/update",
     "title": "修改公司信息",
     "group": "CompanyInfo",
     "parameter": {
@@ -452,9 +452,9 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/CompanyInfoController.java",
+    "filename": "./src/main/java/com/sys/company/controller/CompanyInfoController.java",
     "groupTitle": "公司",
-    "name": "PostCompanyUpdate"
+    "name": "PostSysCompanyUpdate"
   },
   {
     "success": {
@@ -486,7 +486,7 @@
   },
   {
     "type": "get",
-    "url": "/material/list",
+    "url": "/product/sort/material/list",
     "title": "按页获取所有材料",
     "group": "MaterialType",
     "parameter": {
@@ -542,13 +542,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/MaterialTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/MaterialTypeController.java",
     "groupTitle": "材料",
-    "name": "GetMaterialList"
+    "name": "GetProductSortMaterialList"
   },
   {
     "type": "post",
-    "url": "/material/add",
+    "url": "/product/sort/material/add",
     "title": "新增材料",
     "group": "MaterialType",
     "parameter": {
@@ -632,13 +632,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/MaterialTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/MaterialTypeController.java",
     "groupTitle": "材料",
-    "name": "PostMaterialAdd"
+    "name": "PostProductSortMaterialAdd"
   },
   {
     "type": "post",
-    "url": "/material/delete",
+    "url": "/product/sort/material/delete",
     "title": "删除材料",
     "group": "MaterialType",
     "parameter": {
@@ -694,13 +694,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/MaterialTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/MaterialTypeController.java",
     "groupTitle": "材料",
-    "name": "PostMaterialDelete"
+    "name": "PostProductSortMaterialDelete"
   },
   {
     "type": "post",
-    "url": "/material/update",
+    "url": "/product/sort/material/update",
     "title": "修改材料信息",
     "group": "MaterialType",
     "parameter": {
@@ -791,13 +791,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/MaterialTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/MaterialTypeController.java",
     "groupTitle": "材料",
-    "name": "PostMaterialUpdate"
+    "name": "PostProductSortMaterialUpdate"
   },
   {
     "type": "get",
-    "url": "/product/list",
+    "url": "/product/view/list",
     "title": "按页获取所有货品",
     "group": "ProductInfo",
     "parameter": {
@@ -853,13 +853,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductInfoController.java",
+    "filename": "./src/main/java/com/product/view/controller/ProductInfoController.java",
     "groupTitle": "货品",
-    "name": "GetProductList"
+    "name": "GetProductViewList"
   },
   {
     "type": "post",
-    "url": "/product/add",
+    "url": "/product/view/add",
     "title": "新增货品",
     "group": "ProductInfo",
     "parameter": {
@@ -1048,13 +1048,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductInfoController.java",
+    "filename": "./src/main/java/com/product/view/controller/ProductInfoController.java",
     "groupTitle": "货品",
-    "name": "PostProductAdd"
+    "name": "PostProductViewAdd"
   },
   {
     "type": "post",
-    "url": "/product/delete",
+    "url": "/product/view/delete",
     "title": "删除货品",
     "group": "ProductInfo",
     "parameter": {
@@ -1110,13 +1110,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductInfoController.java",
+    "filename": "./src/main/java/com/product/view/controller/ProductInfoController.java",
     "groupTitle": "货品",
-    "name": "PostProductDelete"
+    "name": "PostProductViewDelete"
   },
   {
     "type": "post",
-    "url": "/product/update",
+    "url": "/product/view/update",
     "title": "修改货品信息",
     "group": "ProductInfo",
     "parameter": {
@@ -1312,13 +1312,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductInfoController.java",
+    "filename": "./src/main/java/com/product/view/controller/ProductInfoController.java",
     "groupTitle": "货品",
-    "name": "PostProductUpdate"
+    "name": "PostProductViewUpdate"
   },
   {
     "type": "get",
-    "url": "/type/list",
+    "url": "/product/sort/type/list",
     "title": "按页获取所有子分类",
     "group": "ProductType",
     "parameter": {
@@ -1374,13 +1374,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/ProductTypeController.java",
     "groupTitle": "子分类",
-    "name": "GetTypeList"
+    "name": "GetProductSortTypeList"
   },
   {
     "type": "post",
-    "url": "/type/add",
+    "url": "/product/sort/type/add",
     "title": "新增子分类",
     "group": "ProductType",
     "parameter": {
@@ -1478,13 +1478,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/ProductTypeController.java",
     "groupTitle": "子分类",
-    "name": "PostTypeAdd"
+    "name": "PostProductSortTypeAdd"
   },
   {
     "type": "post",
-    "url": "/type/delete",
+    "url": "/product/sort/type/delete",
     "title": "删除子分类",
     "group": "ProductType",
     "parameter": {
@@ -1540,13 +1540,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/ProductTypeController.java",
     "groupTitle": "子分类",
-    "name": "PostTypeDelete"
+    "name": "PostProductSortTypeDelete"
   },
   {
     "type": "post",
-    "url": "/type/update",
+    "url": "/product/sort/type/update",
     "title": "修改子分类信息",
     "group": "ProductType",
     "parameter": {
@@ -1651,13 +1651,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/ProductTypeController.java",
+    "filename": "./src/main/java/com/product/sort/controller/ProductTypeController.java",
     "groupTitle": "子分类",
-    "name": "PostTypeUpdate"
+    "name": "PostProductSortTypeUpdate"
   },
   {
     "type": "get",
-    "url": "/role/list",
+    "url": "/sys/role/list",
     "title": "按页获取所有角色",
     "group": "RoleInfo",
     "parameter": {
@@ -1713,13 +1713,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/RoleInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/RoleInfoController.java",
     "groupTitle": "角色",
-    "name": "GetRoleList"
+    "name": "GetSysRoleList"
   },
   {
     "type": "post",
-    "url": "/role/add",
+    "url": "/sys/role/add",
     "title": "新增角色",
     "group": "RoleInfo",
     "parameter": {
@@ -1782,13 +1782,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/RoleInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/RoleInfoController.java",
     "groupTitle": "角色",
-    "name": "PostRoleAdd"
+    "name": "PostSysRoleAdd"
   },
   {
     "type": "post",
-    "url": "/role/delete",
+    "url": "/sys/role/delete",
     "title": "删除角色",
     "group": "RoleInfo",
     "parameter": {
@@ -1844,13 +1844,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/RoleInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/RoleInfoController.java",
     "groupTitle": "角色",
-    "name": "PostRoleDelete"
+    "name": "PostSysRoleDelete"
   },
   {
     "type": "post",
-    "url": "/role/update",
+    "url": "/sys/role/update",
     "title": "修改角色信息",
     "group": "RoleInfo",
     "parameter": {
@@ -1920,13 +1920,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/RoleInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/RoleInfoController.java",
     "groupTitle": "角色",
-    "name": "PostRoleUpdate"
+    "name": "PostSysRoleUpdate"
   },
   {
     "type": "get",
-    "url": "/user/list",
+    "url": "/sys/user/list",
     "title": "按页获取列表",
     "group": "UserInfo",
     "parameter": {
@@ -1937,7 +1937,28 @@
             "type": "int",
             "optional": false,
             "field": "page",
-            "description": "<p>页号</p>"
+            "description": "<p>页号(必填)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int[]",
+            "optional": false,
+            "field": "roleIds",
+            "description": "<p>角色id条件数组</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "sex",
+            "description": "<p>性别条件</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "disabled",
+            "description": "<p>是否启用</p>"
           }
         ]
       }
@@ -1951,7 +1972,7 @@
         },
         {
           "title": "Success-Response:",
-          "content": "{\n    \"resultCode\": 200,\n    \"resultMsg\": \"成功\",\n    \"data\": [\n    {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 2,\n    \"roleId\": 1,\n    \"loginCode\": \"oh\",\n    \"password\": \"123456\",\n    \"passwordSrc\": \"123456\",\n    \"userName\": \"带\",\n    \"phone\": \"\",\n    \"sex\": \"男\",\n    \"disabled\": 0\n    },\n    {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 3,\n    \"roleId\": 1,\n    \"loginCode\": \"565718\",\n    \"password\": \"123\",\n    \"passwordSrc\": \"123\",\n    \"userName\": \"zty\",\n    \"phone\": \"18320444515\",\n    \"sex\": \"\",\n    \"disabled\": 0\n    }\n    ]\n}",
+          "content": "{\n    \"resultCode\": 200,\n    \"resultMsg\": \"成功\",\n    \"data\": [\n    {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 2,\n    \"roleId\": 1,\n    \"loginCode\": \"oh\",\n    \"password\": \"123456\",\n    \"passwordSrc\": \"123456\",\n    \"userName\": \"带\",\n    \"phone\": \"\",\n    \"sex\": \"男\",\n    \"disabled\": 0\n    },\n    {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 3,\n    \"roleId\": 1,\n    \"loginCode\": \"565718\",\n    \"password\": \"123\",\n    \"passwordSrc\": \"123\",\n    \"userName\": \"sys\",\n    \"phone\": \"18320444515\",\n    \"sex\": \"\",\n    \"disabled\": 0\n    }\n    ]\n}",
           "type": "json"
         }
       ],
@@ -1982,13 +2003,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/UserInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/UserInfoController.java",
     "groupTitle": "用户",
-    "name": "GetUserList"
+    "name": "GetSysUserList"
   },
   {
     "type": "post",
-    "url": "/user/add",
+    "url": "/sys/user/add",
     "title": "添加用户",
     "group": "UserInfo",
     "parameter": {
@@ -2057,7 +2078,7 @@
       "examples": [
         {
           "title": "Success-Request:",
-          "content": "{\n    roleId:1\n    userName:zty\n    password:123\n    passwordSrc:123\n    loginCode:565718\n    phone:18320444515\n}",
+          "content": "{\n    roleId:1\n    userName:sys\n    password:123\n    passwordSrc:123\n    loginCode:565718\n    phone:18320444515\n}",
           "type": "json"
         },
         {
@@ -2093,13 +2114,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/UserInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/UserInfoController.java",
     "groupTitle": "用户",
-    "name": "PostUserAdd"
+    "name": "PostSysUserAdd"
   },
   {
     "type": "post",
-    "url": "/user/delete",
+    "url": "/sys/user/delete",
     "title": "删除用户",
     "group": "UserInfo",
     "parameter": {
@@ -2155,13 +2176,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/UserInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/UserInfoController.java",
     "groupTitle": "用户",
-    "name": "PostUserDelete"
+    "name": "PostSysUserDelete"
   },
   {
     "type": "post",
-    "url": "/user/login",
+    "url": "/sys/user/login",
     "title": "用户登录",
     "group": "UserInfo",
     "parameter": {
@@ -2188,12 +2209,12 @@
       "examples": [
         {
           "title": "Success-Request:",
-          "content": "{\n    userName:zty\n    password:123\n}",
+          "content": "{\n    userName:sys\n    password:123\n}",
           "type": "json"
         },
         {
           "title": "Success-Response:",
-          "content": "{\n    \"resultCode\": 200,\n    \"resultMsg\": \"成功\",\n    \"data\": {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 3,\n    \"roleId\": 1,\n    \"loginCode\": \"565718\",\n    \"password\": \"123\",\n    \"passwordSrc\": \"123\",\n    \"userName\": \"zty\",\n    \"phone\": \"18320444515\",\n    \"sex\": \"\",\n    \"disabled\": 0\n    }\n}",
+          "content": "{\n    \"resultCode\": 200,\n    \"resultMsg\": \"成功\",\n    \"data\": {\n    \"ids\": null,\n    \"rows\": 10,\n    \"page\": 0,\n    \"pageStart\": 0,\n    \"id\": 3,\n    \"roleId\": 1,\n    \"loginCode\": \"565718\",\n    \"password\": \"123\",\n    \"passwordSrc\": \"123\",\n    \"userName\": \"sys\",\n    \"phone\": \"18320444515\",\n    \"sex\": \"\",\n    \"disabled\": 0\n    }\n}",
           "type": "json"
         }
       ],
@@ -2224,13 +2245,13 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/UserInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/UserInfoController.java",
     "groupTitle": "用户",
-    "name": "PostUserLogin"
+    "name": "PostSysUserLogin"
   },
   {
     "type": "post",
-    "url": "/user/update",
+    "url": "/sys/user/update",
     "title": "修改用户信息",
     "group": "UserInfo",
     "parameter": {
@@ -2342,8 +2363,8 @@
       }
     },
     "version": "0.0.0",
-    "filename": "./src/main/java/com/itmsw/ant1/controller/UserInfoController.java",
+    "filename": "./src/main/java/com/sys/user/controller/UserInfoController.java",
     "groupTitle": "用户",
-    "name": "PostUserUpdate"
+    "name": "PostSysUserUpdate"
   }
 ]

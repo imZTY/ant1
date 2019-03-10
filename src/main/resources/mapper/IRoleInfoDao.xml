@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.itmsw.ant1.dao.IRoleInfoDao" >
-    <resultMap id="BaseResultMap" type="com.itmsw.ant1.entity.RoleInfo" >
+<mapper namespace="com.sys.user.dao.IRoleInfoDao" >
+    <resultMap id="BaseResultMap" type="com.common.entity.RoleInfo" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="role_name" property="roleName" jdbcType="VARCHAR" />
         <result column="disabled" property="disabled" jdbcType="INTEGER" />
@@ -9,7 +9,7 @@
     <sql id="Base_Column_List" >
         id, role_name, disabled
     </sql>
-    <insert id="insertSelective" parameterType="com.itmsw.ant1.entity.RoleInfo">
+    <insert id="insertSelective" parameterType="com.common.entity.RoleInfo">
         insert into role_info
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -34,7 +34,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.itmsw.ant1.entity.RoleInfo">
+    <update id="updateByPrimaryKeySelective" parameterType="com.common.entity.RoleInfo">
         update role_info
         <set >
             <if test="id != null" >
@@ -59,7 +59,7 @@
         from role_info
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.itmsw.ant1.entity.RoleInfo">
+    <select id="getListByPage" resultMap="BaseResultMap" parameterType="com.common.entity.RoleInfo">
         SELECT *
         FROM role_info
         limit #{pageStart,jdbcType=INTEGER},#{rows,jdbcType=INTEGER}

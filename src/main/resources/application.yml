@@ -10,7 +10,7 @@ spring:
       password: root
 
 mybatis:
-  typeAliasesPackage: com.itmsw.entity
+  typeAliasesPackage: com.common.entity
   mapperLocations: classpath:mapper/*.xml
 
 

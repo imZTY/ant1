@@ -1,0 +1,32 @@
+卷 资料盘 的文件夹 PATH 列表
+卷序列号为 0005-6146
+src/main/java
+└─com
+    ├─common  【公共模块】
+    │  ├─dto  数据传输对象（返回前端的格式）
+    │  ├─entity  与数据库表对应的数据对象
+    │  └─util    工具类所在的包
+    │      └─SMS  短信工具包
+    ├─product  【货品模块】
+    │  ├─sort  货品分类
+    │  │  ├─controller
+    │  │  ├─dao
+    │  │  ├─dto
+    │  │  └─service
+    │  │      └─impl
+    │  └─view  货品查看
+    │      ├─controller
+    │      ├─dao
+    │      └─service
+    │          └─impl
+    └─sys  【系统模块】
+        ├─company  公司管理
+        │  ├─controller
+        │  ├─dao
+        │  └─service
+        │      └─impl
+        └─user  用户管理
+            ├─controller
+            ├─dao
+            └─service
+                └─impl
