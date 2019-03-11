@@ -2132,6 +2132,13 @@
             "optional": false,
             "field": "id",
             "description": "<p>用户id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int[]",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>批量操作数组ids（id记得传0）</p>"
           }
         ]
       }
@@ -2262,7 +2269,14 @@
             "type": "int",
             "optional": false,
             "field": "id",
-            "description": "<p>用户id</p>"
+            "description": "<p>用户id（批量操作时，传0）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int[]",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>用户ids（批量操作时，id传0，否则仅对单个处理）</p>"
           },
           {
             "group": "Parameter",

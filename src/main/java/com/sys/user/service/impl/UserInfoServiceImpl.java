@@ -44,7 +44,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public CommonDTO update(UserInfo userInfo) {
         try{
-            if (userInfo.getIds().length == 0 || userInfo.getId() != 0) {
+            if (userInfo.getIds() == null || userInfo.getId() != 0) {
                 return CommonDTOUtil.success(userInfoDao.updateByPrimaryKeySelective(userInfo));
             }else{
                 for (int id :
@@ -69,7 +69,15 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public CommonDTO delete(UserInfo userInfo) {
         try {
-            return CommonDTOUtil.success(userInfoDao.deleteByPrimaryKey(userInfo.getId()));
+            if (userInfo.getIds() == null || userInfo.getId() != 0) {
+                return CommonDTOUtil.success(userInfoDao.deleteByPrimaryKey(userInfo.getId()));
+            }else{
+                for (int id :
+                        userInfo.getIds()) {
+                    userInfoDao.deleteByPrimaryKey(id);
+                }
+                return CommonDTOUtil.success();
+            }
         }catch (Exception e){
             e.printStackTrace();
             return CommonDTOUtil.error(500, e.getMessage());
@@ -85,8 +93,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public CommonDTO getListByPage(UserInfoFilter userInfoFilter) {
         try{
-            System.out.println(userInfoFilter.roleIdsToStr());
-            userInfoFilter.setRoleIdsStr(userInfoFilter.roleIdsToStr());// 数组转字符串,用于sql拼接
             userInfoFilter.setPageStart( (userInfoFilter.getPage()-1)*userInfoFilter.getRows() );
             return CommonDTOUtil.success(userInfoDao.getListByPage(userInfoFilter));
         }catch (Exception e){

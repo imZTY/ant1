@@ -15,18 +15,17 @@ public class UserInfo extends PageEntity implements Serializable {
 
     private Integer roleId;
 
-    // 这是验证码？
     private String loginCode;
 
     private String password;
 
-    private String passwordSrc;
+    private String passwordSrc = "123456";
 
     private String userName;
 
-    private String phone;
+    private String phone = "暂无";
 
-    private String sex;
+    private Integer sex = 1;
 
-    private Integer disabled;
+    private Integer disabled = 0;
 }

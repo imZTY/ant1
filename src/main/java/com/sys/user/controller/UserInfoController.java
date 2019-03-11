@@ -78,7 +78,7 @@ public class UserInfoController {
      * @apiParam {String} password 初始密码
      * @apiParam {String} passwordSrc 初始密码的？？
      * @apiParam {String} phone 初始手机号
-     * @apiParam {String} sex 初始性别
+     * @apiParam {int} sex 初始性别
      * @apiParam {int} disabled 是否启用？
      * @apiSuccessExample Success-Request:
      * {
@@ -106,14 +106,14 @@ public class UserInfoController {
      * @api {post} /sys/user/update 修改用户信息
      * @apiGroup UserInfo
      * @apiParam {int} id 用户id（批量操作时，传0）
-     * @apiParam {int[]} id 用户id（批量操作时，id传0，否则仅对单个处理）
+     * @apiParam {int[]} ids 用户ids（批量操作时，id传0，否则仅对单个处理）
      * @apiParam {int} roleId 用户角色id
      * @apiParam {String} loginCode 用户验证码？？
      * @apiParam {String} userName 用户用户名
      * @apiParam {String} password 用户密码
      * @apiParam {String} passwordSrc 用户密码的？？
      * @apiParam {String} phone 用户手机号
-     * @apiParam {String} sex 用户性别
+     * @apiParam {int} sex 用户性别
      * @apiParam {int} disabled 是否启用？
      * @apiSuccessExample Success-Request:
      * {
@@ -137,6 +137,7 @@ public class UserInfoController {
      * @api {post} /sys/user/delete 删除用户
      * @apiGroup UserInfo
      * @apiParam {int} id 用户id
+     * @apiParam {int[]} ids 批量操作数组ids（id记得传0）
      * @apiSuccessExample Success-Request:
      * {
      *     id:4
@@ -159,7 +160,7 @@ public class UserInfoController {
      * @apiGroup UserInfo
      * @apiParam {int} page 页号(必填)
      * @apiParam {int[]} roleIds 角色id条件数组
-     * @apiParam {String} sex 性别条件
+     * @apiParam {int} sex 性别条件
      * @apiParam {int} disabled 是否启用
      * @apiSuccessExample Success-Request:
      * {
@@ -206,7 +207,6 @@ public class UserInfoController {
      */
     @GetMapping("/list")
     public CommonDTO getList(UserInfoFilter userInfoFilter){
-        userInfoFilter.setPageStart( (userInfoFilter.getPage()-1) * userInfoFilter.getRows() );
         return userInfoService.getListByPage(userInfoFilter);
     }
 }

@@ -127,7 +127,7 @@
             </foreach>
         </if>
         <if test="sex != null" >
-            and sex = #{sex, jdbcType=VARCHAR}
+            and sex = #{sex, jdbcType=INTEGER}
         </if>
         <if test="disabled != null" >
             and disabled = #{disabled, jdbcType=INTEGER}

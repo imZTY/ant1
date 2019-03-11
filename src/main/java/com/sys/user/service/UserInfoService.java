@@ -37,7 +37,7 @@ public interface UserInfoService {
 
     /**
      * 获取用户列表
-     * @param userInfo 含有分页属性
+     * @param userInfoFilter 筛选条件对象
      * @return
      */
     public CommonDTO getListByPage(UserInfoFilter userInfoFilter);
